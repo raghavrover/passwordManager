@@ -1,0 +1,98 @@
+.password-item {
+  width: 100%;
+  min-height: 60px;
+  padding: 4px 10px 4px 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+
+  list-style-type: none;
+
+  border: 1px solid #b6c3ca;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.password-item-profile {
+  height: 45px;
+  width: 45px;
+  padding: 8px 4px 2px 4px;
+  margin-right: 10px;
+  border: 0 solid;
+  border-radius: 50px;
+
+  text-align: center;
+}
+
+.profile-letter {
+  margin-top: 0px;
+
+  font-family: 'Roboto';
+  font-size: 22px;
+  font-weight: 500;
+
+  color: #ffffff;
+}
+
+.password-item-details {
+  padding: 4px 0px 4px 0px;
+  margin-right: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  flex-grow: 1;
+}
+
+.website-domain-name {
+  margin-top: 0px;
+  margin-bottom: 4px;
+
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+
+  color: #ffffff;
+}
+
+.username {
+  margin-top: 0px;
+  margin-bottom: 6px;
+  font-family: 'Roboto';
+  font-size: 11px;
+  font-weight: 400;
+
+  color: #ffffff;
+}
+
+.show-hide-pwd {
+  margin: 0px;
+  padding: 0px 2px 0px 2px;
+}
+
+.hidden-pwd-stars {
+  height: 13px;
+  width: 120px;
+}
+
+.delete-btn {
+  padding-right: 0px;
+  border: none;
+
+  background-color: transparent;
+}
+
+.delete-icon-img {
+  height: 30px;
+  width: 26px;
+}
+
+@media (min-width: 768px) {
+  .password-item {
+    width: 250px;
+  }
+}
