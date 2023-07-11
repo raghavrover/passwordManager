@@ -1,4 +1,8 @@
-In this project, let's build a **Password Manager** by applying the concepts we have learned till now.
+In this project, I've built a **Password Manager** by using ReactJs.
+
+### Aim
+
+The aim of the project is store and manage passwords for websites, to make you login without hassle free remembering of lots of passwords.
 
 ### Refer to the image below:
 
@@ -8,7 +12,7 @@ In this project, let's build a **Password Manager** by applying the concepts we 
 </div>
 <br/>
 
-### Design Files
+### Design Files on Different Devices
 
 <details>
 <summary>Click to view</summary>
@@ -22,51 +26,25 @@ In this project, let's build a **Password Manager** by applying the concepts we 
 
 </details>
 
-### Set Up Instructions
+### Application Functionalities
 
 <details>
-<summary>Click to view</summary>
-
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
-
-### Completion Instructions
-
-<details>
-<summary>Functionality to be added</summary>
+<summary>Functionalities added</summary>
 <br/>
 
-The app must have the following functionalities
+The app has the following functionalities
 
-- Initially, the website input, username input, and password input should be empty and [No Passwords View](https://assets.ccbp.in/frontend/content/react-js/password-manager-no-passwords-lg-output.png) should be displayed
 - When non-empty values are provided for the website, username, and password and the **Add** button is clicked,
-  - A new password item should be added to the list of passwords
-  - The passwords count should be incremented by one
-  - The **stars image** should be displayed in the password items instead of the passwords
-  - The value of the input fields for website, username, and password should be updated to their initial values
-  - When the **Show Password** is checked, then the password should be displayed instead of the **stars image**
-- When a non-empty value is provided in the search input field, then password items whose website is matched with the search input value irrespective of the case should be displayed
-- When a non-empty value is provided in the search input field, and if the website of any password item does not match the value given in the search input, then [No Passwords View](https://assets.ccbp.in/frontend/content/react-js/password-manager-no-passwords-lg-output.png) should be displayed
+  - A new password item will be added to the list of passwords
+  - The passwords count will be incremented by one
+  - The **stars image** will be displayed in the password items instead of the passwords
+  - When the **Show Password** is checked, then the password will be displayed instead of the **stars image**
+- When a non-empty value is provided in the search input field, then password items whose website is matched with the search input value irrespective of the case will be displayed
+- When a non-empty value is provided in the search input field, and if the website of any password item does not match the value given in the search input, then [No Passwords View](https://assets.ccbp.in/frontend/content/react-js/password-manager-no-passwords-lg-output.png) will be displayed
 - When the delete button of a password item is clicked,
-  - The respective password item should be deleted from the list of passwords
-  - The passwords count should be decremented by one
-- When all password items are deleted, then [No Passwords View](https://assets.ccbp.in/frontend/content/react-js/password-manager-no-passwords-lg-output.png) should be displayed
-</details>
-
-### Important Note
-
-<details>
-<summary>Click to view</summary>
-
-<br/>
-
-**The following instructions are required for the tests to pass**
-
-- HTML input element for website should have the placeholder as **Enter Website**
-- HTML input element for username should have the placeholder as **Enter Username**
-- HTML input element for password should have the placeholder as **Enter Password**
-- The delete button for each password item should have the data-testid as **delete**
+  - The respective password item will be deleted from the list of passwords
+  - The passwords count will be decremented by one
+- When all password items are deleted, then [No Passwords View](https://assets.ccbp.in/frontend/content/react-js/password-manager-no-passwords-lg-output.png) will be displayed
 </details>
 
 ### Resources
@@ -117,10 +95,3 @@ The app must have the following functionalities
 - Roboto
 
 </details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.

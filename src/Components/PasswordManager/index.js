@@ -103,132 +103,134 @@ class PasswordManager extends Component {
     const lengthOfList = this.getLengthOfPasswordsList(currentPasswordItemsList)
     return (
       <div className="password-manager-container">
-        <div className="password-manager-logo">
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/password-manager-logo-img.png"
-            className="password-manager-logo-img"
-            alt="app logo"
-          />
-        </div>
-        <div className="password-adding-card password-card">
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/password-manager-sm-img.png"
-            className="password-manager-img sm-img"
-            alt="password manager"
-          />
-          <form
-            className="password-input-container"
-            onSubmit={this.onAddPassword}
-          >
-            <h1 className="add-pwd-heading">Add New Password</h1>
-
-            <div className="input-field-container">
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/password-manager-website-img.png"
-                className="input-field-icon-img"
-                alt="website"
-              />
-              <input
-                type="text"
-                className="input-field"
-                placeholder="Enter Website"
-                value={websiteName}
-                onChange={this.getWebsiteName}
-              />
-            </div>
-            <div className="input-field-container">
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/password-manager-username-img.png"
-                className="input-field-icon-img"
-                alt="username"
-              />
-              <input
-                type="text"
-                className="input-field"
-                placeholder="Enter Username"
-                value={username}
-                onChange={this.getUsername}
-              />
-            </div>
-            <div className="input-field-container">
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/password-manager-password-img.png"
-                className="input-field-icon-img"
-                alt="password"
-              />
-              <input
-                type="password"
-                className="input-field"
-                placeholder="Enter Password"
-                value={password}
-                onChange={this.getPassword}
-              />
-            </div>
-            <div className="add-input-btn-container">
-              <button type="submit" className="add-input-btn">
-                Add
-              </button>
-            </div>
-          </form>
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/password-manager-lg-img.png"
-            className="password-manager-img lg-img"
-            alt="password manager"
-          />
-        </div>
-        <div className="passwords-container password-card">
-          <div className="passwords-container-header">
-            <div className="passwords-count-container">
-              <h1 className="your-passwords-text">Your Passwords</h1>
-              <p className="passwords-count">{passwordItemsCount}</p>
-            </div>
-            <div className="search-input-container">
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/password-manager-search-img.png"
-                className="search-input-icon"
-                alt="search"
-              />
-              <input
-                type="search"
-                className="search-input-field"
-                value={searchInput}
-                onChange={this.getSearchInput}
-              />
-            </div>
-          </div>
-          <div className="show-passwords-container">
-            <input
-              id="showPwd"
-              type="checkbox"
-              onChange={this.showAllPasswords}
+        <div className="password-manager-content">
+          <div className="password-manager-logo">
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/password-manager-logo-img.png"
+              className="password-manager-logo-img"
+              alt="app logo"
             />
-            <label htmlFor="showPwd" className="show-passwords-text">
-              Show Passwords
-            </label>
           </div>
-          {lengthOfList > 0 && (
-            <ul className="password-item-list">
-              {currentPasswordItemsList.map(eachItem => (
-                <PasswordItem
-                  key={eachItem.id}
-                  passwordItemDetails={eachItem}
-                  isShowPasswordsTicked={showPasswords}
-                  removePasswordItem={this.removePasswordItem}
-                />
-              ))}
-            </ul>
-          )}
-          {lengthOfList === 0 && (
-            <>
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
-                className="no-passwords-view"
-                alt="no passwords"
-              />
+          <div className="password-adding-card password-card">
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/password-manager-sm-img.png"
+              className="password-manager-img sm-img"
+              alt="password manager"
+            />
+            <form
+              className="password-input-container"
+              onSubmit={this.onAddPassword}
+            >
+              <h1 className="add-pwd-heading">Add New Password</h1>
 
-              <p className="no-passwords-text">No Passwords</p>
-            </>
-          )}
+              <div className="input-field-container">
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/password-manager-website-img.png"
+                  className="input-field-icon-img"
+                  alt="website"
+                />
+                <input
+                  type="text"
+                  className="input-field"
+                  placeholder="Enter Website"
+                  value={websiteName}
+                  onChange={this.getWebsiteName}
+                />
+              </div>
+              <div className="input-field-container">
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/password-manager-username-img.png"
+                  className="input-field-icon-img"
+                  alt="username"
+                />
+                <input
+                  type="text"
+                  className="input-field"
+                  placeholder="Enter Username"
+                  value={username}
+                  onChange={this.getUsername}
+                />
+              </div>
+              <div className="input-field-container">
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/password-manager-password-img.png"
+                  className="input-field-icon-img"
+                  alt="password"
+                />
+                <input
+                  type="password"
+                  className="input-field"
+                  placeholder="Enter Password"
+                  value={password}
+                  onChange={this.getPassword}
+                />
+              </div>
+              <div className="add-input-btn-container">
+                <button type="submit" className="add-input-btn">
+                  Add
+                </button>
+              </div>
+            </form>
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/password-manager-lg-img.png"
+              className="password-manager-img lg-img"
+              alt="password manager"
+            />
+          </div>
+          <div className="passwords-container password-card">
+            <div className="passwords-container-header">
+              <div className="passwords-count-container">
+                <h1 className="your-passwords-text">Your Passwords</h1>
+                <p className="passwords-count">{passwordItemsCount}</p>
+              </div>
+              <div className="search-input-container">
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/password-manager-search-img.png"
+                  className="search-input-icon"
+                  alt="search"
+                />
+                <input
+                  type="search"
+                  className="search-input-field"
+                  value={searchInput}
+                  onChange={this.getSearchInput}
+                />
+              </div>
+            </div>
+            <div className="show-passwords-container">
+              <input
+                id="showPwd"
+                type="checkbox"
+                onChange={this.showAllPasswords}
+              />
+              <label htmlFor="showPwd" className="show-passwords-text">
+                Show Passwords
+              </label>
+            </div>
+            {lengthOfList > 0 && (
+              <ul className="password-item-list">
+                {currentPasswordItemsList.map(eachItem => (
+                  <PasswordItem
+                    key={eachItem.id}
+                    passwordItemDetails={eachItem}
+                    isShowPasswordsTicked={showPasswords}
+                    removePasswordItem={this.removePasswordItem}
+                  />
+                ))}
+              </ul>
+            )}
+            {lengthOfList === 0 && (
+              <>
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
+                  className="no-passwords-view"
+                  alt="no passwords"
+                />
+
+                <p className="no-passwords-text">No Passwords</p>
+              </>
+            )}
+          </div>
         </div>
       </div>
     )

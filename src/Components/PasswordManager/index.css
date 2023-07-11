@@ -6,13 +6,21 @@
   background-color: #9ba9eb;
 
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.password-manager-content {
+  width: 90%;
+
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
 .password-manager-logo {
-  width: 95%;
+  width: 100%;
   margin-bottom: 16px;
   padding-top: 0px;
 
@@ -25,7 +33,7 @@
 }
 
 .password-card {
-  width: 95%;
+  width: 100%;
   padding: 20px 10px 20px 10px;
   margin-bottom: 20px;
   border-radius: 6px;
@@ -212,6 +220,7 @@
   font-weight: 400;
 
   outline: none;
+  flex-grow: 1;
 }
 
 .show-passwords-container {
@@ -259,11 +268,16 @@
 }
 
 @media (min-width: 768px) {
+  .password-manager-content {
+    width: 85%;
+    max-width: 900px;
+  }
+
   .password-manager-logo {
-    width: 70%;
+    width: 100%;
   }
   .password-card {
-    width: 70%;
+    width: 100%;
   }
 
   .password-adding-card {
@@ -287,6 +301,7 @@
 
   .password-input-container {
     width: 50%;
+    max-width: 400px;
   }
 
   .search-input-container {
